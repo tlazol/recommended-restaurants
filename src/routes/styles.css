@@ -139,9 +139,13 @@ html {
 }
 
 body {
-  --text-color: #fff;
-  --a-color: #fff;
-  --main-background: #111;
+  --text-color: #111;
+  --text-color-white: #fff;
+  --text-color-sub: #5e5e5e;
+  --key-color: #6fffa5;
+  --warning-color: #da2f43;
+  --main-background: #fff;
+  --sub-background-color: #ececec;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeLegibility;
