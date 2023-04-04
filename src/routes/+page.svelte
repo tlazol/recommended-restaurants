@@ -65,7 +65,7 @@
   <div class="bodyWrap">
     <textarea
       bind:value={text}
-      placeholder="ここに要望を書いてください。下に例文も書いておきます。"
+      placeholder="ここに150文字以内で要望を書いてください。下に例文も書いておきます。"
       maxlength="150"
     />
     <button on:click={handleClick}>オススメ教えて</button>
