@@ -55,11 +55,13 @@
 
 <div class="wrap">
   <header>
-    <h1>飲食店オススメ AI</h1>
-    <p class="description">
-      ※ 個人情報や会社の機微情報を入力してはいけません ※<br />※
-      虚実と事実が折り混ざった嘘情報満載ですのでご注意ください ※
-    </p>
+    <div>
+      <h1>飲食店オススメ AI</h1>
+      <p class="description">
+        ※ 個人情報や会社の機微情報を入力してはいけません ※<br />※
+        虚実と事実が折り混ざった嘘情報満載ですのでご注意ください ※
+      </p>
+    </div>
   </header>
   <div class="bodyWrap">
     <textarea
@@ -143,10 +145,12 @@
     text-align: center;
     color: var(--warning-color);
     margin-top: 0.5rem;
+    width: 100%;
+    max-width: 62rem;
   }
 
   .bodyWrap {
-    max-width: 80rem;
+    max-width: 70rem;
     padding: 0 2rem;
     width: 100%;
     display: flex;
