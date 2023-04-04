@@ -8,7 +8,14 @@
   </main>
 
   <footer>
-    <p>copyright Daisuke Kobayashi</p>
+    <p>
+      copyright <a
+        class="twitter"
+        href="https://twitter.com/0rga"
+        target="_blank"
+        rel="noopener noreferrer">@0rga</a
+      >
+    </p>
   </footer>
 </div>
 
@@ -33,5 +40,11 @@
     padding: 0 2rem;
     margin-top: 12rem;
     margin-bottom: 6rem;
+  }
+
+  footer a {
+    color: var(--a-color);
+    text-decoration: underline;
+    font-size: 1.4rem;
   }
 </style>
