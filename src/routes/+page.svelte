@@ -1,10 +1,12 @@
 <script lang="ts">
   let text = ''
   let answerText = ''
+  let answerFlg = false
 
   async function ask() {
     if (text !== '') {
       answerText = ''
+      answerFlg = true
       const response = await fetch('/api/generate', {
         method: 'POST',
         body: JSON.stringify({ text }),
@@ -13,6 +15,7 @@
         }
       })
       const answer = await response.json()
+      answerFlg = false
 
       renderText(answer.data.content)
 
@@ -49,7 +52,7 @@
   <title>オススメの飲食店を教えてくれる GPT 君</title>
   <meta
     name="description"
-    content="テキストエリアに要望を書いてボタンを押せば GPT がオススメの飲食店を教えてくれるよ！【注意】ほぼ架空のお店を紹介してくるので気をつけてください。<br>AIによるレコメンドの雰囲気を感じるためだけのアプリです。【注意】"
+    content="テキストエリアに要望を書いてボタンを押せば GPT がオススメの飲食店を教えてくれるよ！【注意】ほぼ架空のお店を紹介してくるので気をつけてください。AIによるレコメンドの雰囲気を感じるためだけのアプリです。【注意】"
   />
 </svelte:head>
 
@@ -68,7 +71,9 @@
       placeholder="ここに150文字以内で要望を書いてください。下に例文も書いておきます。"
       maxlength="150"
     />
-    <button on:click={handleClick}>オススメ教えて</button>
+    {#if !answerFlg}
+      <button on:click={handleClick}>オススメ教えて</button>
+    {/if}
     <div class="answerWrap">
       {#await askPromise}
         {#if text !== ''}
