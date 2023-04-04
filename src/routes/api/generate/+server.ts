@@ -12,6 +12,12 @@ export const POST: RequestHandler = async ({ request }) => {
   try {
     const { text } = await request.json()
 
+    console.log(text, text.length)
+
+    if (text.length > 150) {
+      return json({ data: null })
+    }
+
     const completion = await openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
       messages: [

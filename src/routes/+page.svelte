@@ -58,8 +58,7 @@
     <div>
       <h1>飲食店オススメ AI</h1>
       <p class="description">
-        ※ 個人情報や会社の機微情報を入力してはいけません ※<br />※
-        虚実と事実が折り混ざった嘘情報満載ですのでご注意ください ※
+        ※ 個人情報や会社の機微情報の入力は NG ※<br />※ 嘘店舗情報満載ですのでご注意ください ※
       </p>
     </div>
   </header>
@@ -67,6 +66,7 @@
     <textarea
       bind:value={text}
       placeholder="ここに要望を書いてください。下に例文も書いておきます。"
+      maxlength="150"
     />
     <button on:click={handleClick}>オススメ教えて</button>
     <div class="answerWrap">
